@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/lay_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/opaque60White"
+        android:clickable="true"
+        android:elevation="@dimen/small_medium"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_loading"
+            android:layout_width="@dimen/mortal_height"
+            android:layout_height="@dimen/mortal_height"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorPrimaryDark"
+            app:SpinKit_Style="Wave" />
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/tiny"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_large" />
+    </LinearLayout>
+</FrameLayout>
